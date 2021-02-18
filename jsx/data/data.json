@@ -1,25 +1,4 @@
-/* Bundled with FJB */function globalDef(value) {  return window && value && value.name && (window[value.name] = value);}var __jsx_queue = [];globalDef(__jsx_queue);function __isElement(obj) {  try {    return obj instanceof HTMLElement;  } catch (e) {    return (      typeof obj === "object" &&      obj.nodeType === 1 &&      typeof obj.style === "object" &&      typeof obj.ownerDocument === "object"    );  }}globalDef(__isElement);function __toElement(val) {  if (__isElement(val)) return val;  if (typeof val == "string" || typeof val == "number")    return document.createTextNode(val);    return val;}function __jsx_append_many(parent, elements) {  for (var i = 0; i < elements.length; i++) {    parent.appendChild(__toElement(elements[i]));  }}globalDef(__jsx_append_many);function __jsx_append(parent, el) {  if (!Array.isArray(el)) return parent.appendChild(__toElement(el));  return __jsx_append_many(parent, el);}globalDef(__jsx_append);function React_createTextNode(text) {  return React.createElement("span", null, text);}globalDef(React_createTextNode); ;var _fjb1=(function(module={},exports={}){function render (jsx,root_id){const el=document.getElementById(root_id);el.innerHTML='';el.appendChild(jsx);} ;if (typeof this !== "undefined"){this.render=render;};var __exp = module.exports || exports;return typeof __exp=="function"?__exp:(Object.assign(this, __exp));}).call({},{},{},);let render=(_fjb1.render||_fjb1);; ;var _fjb9=(function(module={},exports={}){const cardStyle=`
-background-color: white;
-color: black;
-box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
-width: 200px;
-height: 200px;
-display: grid;
-grid-template-rows: 20% auto;
-font-family: Sans-Serif;
-cursor: pointer;
-`;const cardHeaderStyle=`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  background-color: rgb(48, 48, 48);
-`;const cardBodyStyle=`
-  box-sizing: border-box;
-  padding: 1rem;
-`; function CardHeader (){return (function (){(this.ref=(this.element=(function(){let parent = document.createElement("section");;return parent;})(/* style=cardHeaderStyle */))); this.ref.setAttribute("style", cardHeaderStyle);  return this.ref;}).apply(this);} ;if (typeof this !== "undefined"){this.CardHeader=CardHeader;}; function CardBody (){return (function (){(this.ref=(this.element=(function(){let parent = document.createElement("section");;return parent;})(/* style=cardBodyStyle */))); this.ref.setAttribute("style", cardBodyStyle);  return this.ref;}).apply(this);} ;if (typeof this !== "undefined"){this.CardBody=CardBody;}; function Card (name,description){this.state={toggled:false};this.toggle=function   (){this.state.toggled=!this.state.toggled;} ;handleClick=function   (e){e.preventDefault();this.toggle();this.ref.style.backgroundColor=this.state.toggled?"purple":"";} .bind(this);return ((function (){(this.ref=(this.element=(function(){let parent = document.createElement("div");__jsx_append(parent,(function(){(this.ref =(this.element =(function(){ let parent = new CardHeader();CardHeader;__jsx_append(parent,document.createTextNode(`${name}`));;return parent;})(/*  */)));   return this.ref;}).apply(this));__jsx_append(parent,(function(){(this.ref =(this.element =(function(){ let parent = new CardBody();CardBody;__jsx_append(parent,document.createTextNode(`${description}`));;return parent;})(/*  */)));   return this.ref;}).apply(this));;return parent;})(/* click=handleClick,style=cardStyle,title=name */))); this.ref.addEventListener("click",handleClick);this.ref.setAttribute("style", cardStyle);this.ref.setAttribute("title", name);  return this.ref;}).apply(this));} ;if (typeof this !== "undefined"){this.Card=Card;};var __exp = module.exports || exports;return typeof __exp=="function"?__exp:(Object.assign(this, __exp));}).call({},{},{},);let Card=(_fjb9.Card||_fjb9);;
-/* IMPORT `./components/../data/data.json` */
-;var _fjb14=(function(module={},exports={}){let cardData=[
+[
   {
     "title": "Tockus flavirostris",
     "description": "Advanced asymmetric policy"
@@ -277,11 +256,3 @@ cursor: pointer;
     "description": "Balanced cohesive approach"
   }
 ]
-;if (typeof this !== "undefined"){this.cardData=cardData;};;var __exp = module.exports || exports;return typeof __exp=="function"?__exp:(Object.assign(this, __exp));}).call({},{},{},);let cardData=(_fjb14.cardData||_fjb14);; ;var _fjb6=(function(module={},exports={}){const appStyle=`
-  width: 100%;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 0.1fr));
-  grid-template-rows: repeat(auto-fit, minmax(200px, 0.1fr));
-  grid-gap: 2rem;
-`; function App (){return ((function (){(this.ref=(this.element=(function(){let parent = document.createElement("div");__jsx_append(parent,cardData.map((data)=>((function(){(this.ref =(this.element =(function(){ let parent = new Card(text=data.title,description=data.description);Card;;return parent;})(/* text=data.title,description=data.description */))); this.ref.setAttribute("text", data.title);this.ref.setAttribute("description", data.description);  return this.ref;}).apply(this))));;return parent;})(/* style=appStyle */))); this.ref.setAttribute("style", appStyle);  return this.ref;}).apply(this));} ;if (typeof this !== "undefined"){this.App=App;};var __exp = module.exports || exports;return typeof __exp=="function"?__exp:(Object.assign(this, __exp));}).call({},{},{},);let App=(_fjb6.App||_fjb6);
-/* IMPORT `index.jsx` */ render((function(){(this.ref =(this.element =(function(){ let parent = new App();App;;return parent;})(/*  */)));   return this.ref;}).apply(this),"root");

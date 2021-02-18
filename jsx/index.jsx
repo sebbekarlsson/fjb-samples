@@ -1,14 +1,5 @@
-function render(firstname, lastname) {
-  return (
-    <div title="hello" data-name={lastname}>
-      <h1>Welcome {firstname}</h1>
-      <p>
-        Hello {firstname} {lastname}
-      </p>
-    </div>
-  );
-}
+import { render } from "./render";
+import { App } from "./components/app";
 
-document.addEventListener('DOMContentLoaded', function () {
-  document.getElementById("root").appendChild(render("John", "Doe"));
-});
+
+render(<App />, "root");
